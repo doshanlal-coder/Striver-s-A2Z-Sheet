@@ -112,7 +112,7 @@
 // class Solution {
 // public:
 //     int reverseNumber(int n) {
-    
+
 //         int temp = n;
 //         int ans = 0;
 //         while (temp > 0)
@@ -123,7 +123,6 @@
 //         }
 
 //         return ans;
-    
 
 //     }
 // };
@@ -134,6 +133,76 @@
 //     return 0;
 // }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Given an integer n, write a function to print all numbers from 1 to n (inclusive) using recursion.
+
+// You must not use any loops such as for, while, or do-while.
+// The function should print each number on a separate line, in increasing order from 1 to n.
+
+// #include <iostream>
+// using namespace std;
+
+// class Solution {
+//   public:
+//     void printNumbers(int n) {
+//         if(n == 0) return ;
+//         printNumbers(n-1);
+//         cout<<n<<"\n";
+
+//     }
+// };
+// int main (){
+//     Solution s;
+//     s.printNumbers(10);
+//     return 0;
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Given an integer n, write a function to print all numbers from n to 1 (inclusive) using recursion.
+
+// You must not use any loops such as for, while, or do-while.
+// The function should print each number on a separate line, in decreasing order from n to 1
+
+// #include <iostream>
+// using namespace std;
+
+// class Solution
+// {
+// public:
+//     void printNumbers(int n)
+//     {
+//         if (n == 0)
+//             return;
+//         cout << n << "\n";
+
+//         printNumbers(n - 1);
+//     }
+// };
+// int main()
+// {
+//     Solution s;
+//     s.printNumbers(10);
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given an integer N, return the sum of first N natural numbers. Try to solve this using recursion.
+
+// #include <iostream>
+// using namespace std;
+// class Solution{	
+// 	public:
+// 		int NnumbersSum(int N){
+//             if(N == 1) return N;
+//             return N + NnumbersSum(N-1);
+// 		}
+// };
+// int main(){
+//     Solution s;
+//     cout<<s.NnumbersSum(100);
+// }
