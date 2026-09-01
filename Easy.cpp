@@ -195,7 +195,7 @@
 
 // #include <iostream>
 // using namespace std;
-// class Solution{	
+// class Solution{
 // 	public:
 // 		int NnumbersSum(int N){
 //             if(N == 1) return N;
@@ -206,3 +206,31 @@
 //     Solution s;
 //     cout<<s.NnumbersSum(100);
 // }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Given an integer array nums, move all the 0's to the end of the array. The relative order of the other elements must remain the same.
+
+// This must be done in place, without making a copy of the array.
+
+#include <iostream>
+using namespace std;
+#include <vector>
+
+class Solution
+{
+public:
+    void moveZeroes(vector<int> &nums)
+    {
+        int i = 0;
+        int j = i + 1;
+
+        while(j< nums.size()){
+            
+        }
+    }
+};
+int main()
+{
+}
