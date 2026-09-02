@@ -214,23 +214,152 @@
 
 // This must be done in place, without making a copy of the array.
 
-#include <iostream>
-using namespace std;
-#include <vector>
+// #include <iostream>
+// using namespace std;
+// #include <vector>
 
-class Solution
-{
-public:
-    void moveZeroes(vector<int> &nums)
-    {
-        int i = 0;
-        int j = i + 1;
+// class Solution
+// {
+// public:
+//     void moveZeroes(vector<int> &nums)
+//     {
+//         int insertPos = 0;
 
-        while(j< nums.size()){
-            
-        }
-    }
-};
-int main()
-{
-}
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             if (nums[i] != 0)
+//             {
+//                 swap(nums[insertPos], nums[i]);
+//                 insertPos++;
+//             }
+//         }
+//     }
+// };
+// int main()
+// {
+
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// #include <iostream>
+// using namespace std;
+// #include <vector>
+
+// class Solution
+// {
+// public:
+//     vector<int> unionArray(vector<int> &nums1, vector<int> &nums2)
+//     {
+//         int n1 = 0;
+//         int n2 = 0;
+//         vector<int> uni = {};
+//         while (n1 < nums1.size() and n2 < nums2.size())
+//         {
+//             if (nums1[n1] < nums2[n2])
+//             {
+//                 if (uni.empty() or uni.back() != nums1[n1])
+//                 {
+//                     uni.push_back(nums1[n1]);
+//                 }
+//                 n1++;
+//             }
+//             else if (nums1[n1] > nums2[n2])
+//             {
+//                 if (uni.empty() or uni.back() != nums2[n2])
+//                 {
+//                     uni.push_back(nums2[n2]);
+//                 }
+//                 n2++;
+//             }
+//             else if (nums1[n1] == nums2[n2])
+//             {
+//                 if (uni.empty() or uni.back() != nums1[n1])
+//                 {
+//                     uni.push_back(nums1[n1]);
+//                 }
+//                 n1++;
+//                 n2++;
+//             }
+//         }
+//         while (n1 < nums1.size())
+//         {
+//             if (uni.empty() or uni.back() != nums1[n1])
+//             {
+//                 uni.push_back(nums1[n1]);
+//             }
+//             n1++;
+//         }
+//         while (n2 < nums2.size())
+//         {
+//             if (uni.empty() or uni.back() != nums2[n2])
+//             {
+//                 uni.push_back(nums2[n2]);
+//             }
+//             n2++;
+//         }
+//         return uni;
+//     }
+// };
+// int main()
+// {
+//     Solution s;
+//     vector<int> num1 = {1, 2, 3, 4, 5, 6, 7};
+//     vector<int> num2 = {4, 5, 6, 7, 8};
+//     vector<int> result = s.unionArray(num1, num2);
+//     for (int val : result)
+//         cout << val << " ";
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given an array of nums of n integers. Every integer in the array appears twice except one integer. Find the number that appeared once in the array.
+
+// Example 1
+
+// Input : nums = [1, 2, 2, 4, 3, 1, 4]
+
+// Output : 3
+
+// Explanation : The integer 3 has appeared only once.
+
+// Example 2
+
+// Input : nums = [5]
+
+// Output : 5
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Solution
+// {
+// public:
+//     int singleNumber(vector<int> &nums)
+//     {
+//         // XOR of any element with zero is the element itself ie 8^0 = 8
+//         // XOR of element with itself is always zero it 8^8 = 0
+
+//         int XORR = 0;       // initilizing
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             XORR = XORR ^ nums[i]; //adding all values 
+//             //at the end the pairs will be cancelled       //eg      a^b^c^d^e^f^f^c^b^a^d = e     it is commutative
+//         }
+//         //at the end only single value will remain
+//         return XORR;
+//     }
+// };
+// int main()
+// {
+//     vector<int> arr = {4, 1, 2, 1, 2};
+
+//     Solution obj;
+//     int ans = obj.singleNumber(arr);
+
+//     cout << "The single element is: " << ans << endl;
+
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
