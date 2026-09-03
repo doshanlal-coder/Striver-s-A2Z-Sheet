@@ -363,3 +363,80 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given an array nums consisting of only 0, 1, or 2. Sort the array in non-decreasing order.
+
+
+
+// The sorting must be done in-place, without making a copy of the original array.
+
+
+// Example 1
+
+// Input: nums = [1, 0, 2, 1, 0]
+
+// Output: [0, 0, 1, 1, 2]
+
+// Explanation:
+
+// The nums array in sorted order has 2 zeroes, 2 ones and 1 two
+
+// #include <bits/stdc++.h>
+// #include <vector>
+// using namespace std;
+// class Solution{
+//     public:
+//     void sortZeroOneTwo(vector<int>& nums) {
+
+//         int low = 0, high = nums.size() - 1, mid = 0;
+
+//         while(mid <= high){
+//             if(nums[mid] == 0){
+//                 swap(nums[mid], nums[low]);
+//                 mid++;
+//                 low++;
+//             }else if(nums[mid]==1){
+//                 mid++;
+//             }else{
+//                 swap(nums[high], nums[mid]);
+//                 high--;
+//             }
+//         }
+//     }
+// };
+// int main (){
+//     Solution s;
+//     vector <int> nums = {1, 0, 2, 1, 0};
+//     s.sortZeroOneTwo(nums);
+//     for(int val : nums) cout<<val<<" ";
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given an integer array nums of size n, return the majority element of the array.
+// The majority element of an array is an element that appears more than n/2 times in the array. The array is guaranteed to have a majority element.
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Solution{
+//     public:
+//     int sol(vector <int> & nums){
+//         vector <int> m(10);
+//         for(int val : nums){
+//             m[val]++;
+//         }
+//         int max = m[0];
+//         int itr = 0;
+//         for(int i = 0 ; i< m.size() ; i++){
+//             if(max<= m[i]){
+//                 max = m[i];
+//                 itr = i;
+//             }
+//         }
+//         return itr;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector <int> nums = {1, 1, 1, 2, 1, 2};
+//     cout<<s.sol(nums); 
+// }
