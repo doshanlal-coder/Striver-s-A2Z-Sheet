@@ -440,3 +440,4 @@
 //     vector <int> nums = {1, 1, 1, 2, 1, 2};
 //     cout<<s.sol(nums); 
 // }
+
