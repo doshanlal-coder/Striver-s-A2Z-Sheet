@@ -342,7 +342,7 @@
 //         int XORR = 0;       // initilizing
 //         for (int i = 0; i < nums.size(); i++)
 //         {
-//             XORR = XORR ^ nums[i]; //adding all values 
+//             XORR = XORR ^ nums[i]; //adding all values
 //             //at the end the pairs will be cancelled       //eg      a^b^c^d^e^f^f^c^b^a^d = e     it is commutative
 //         }
 //         //at the end only single value will remain
@@ -365,10 +365,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Given an array nums consisting of only 0, 1, or 2. Sort the array in non-decreasing order.
 
-
-
 // The sorting must be done in-place, without making a copy of the original array.
-
 
 // Example 1
 
@@ -438,6 +435,79 @@
 // int main(){
 //     Solution s;
 //     vector <int> nums = {1, 1, 1, 2, 1, 2};
-//     cout<<s.sol(nums); 
+//     cout<<s.sol(nums);
 // }
 
+/// selection sort
+
+// #include <bits/stdc++.h>
+// #include <vector>
+
+// using namespace std;
+// class Solution
+// {
+// public:
+//     vector<int> select(vector<int> &arr)
+//     {
+//         for (int i = 1; i < arr.size(); i++)
+//         {
+//             for (int j = i - 1; j >= 0; j--)
+//             {
+//                 if (arr[j + 1] < arr[j])
+//                 {
+//                     swap(arr[j + 1], arr[j]);
+//                 }else{
+//                     break;
+//                 }
+//             }
+//         }
+//         return arr;
+//     }
+// };
+// int main()
+// {
+//     Solution s;
+//     vector<int> RR = {29, 10, 14, 37, 13, 45, 56, 0, 0, 1, 89, 454654};
+//     s.select(RR);
+// for (int i = 0; i < RR.size(); i++)
+// {
+//     cout << RR[i] << " ";
+// }
+// }
+
+////BUBBLE SORT ALGORITHM
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Solution
+// {
+// public:
+//     vector<int> sorter(vector<int> &nums)
+//     {
+//         int n = nums.size();
+//         bool flag = true;
+//         while (flag)
+//         {
+//             flag = false;
+//             for (int i = 0; i < n - 1; i++)
+//             {
+//                 if (nums[i] > nums[i + 1])
+//                 {
+//                     swap(nums[i], nums[i + 1]);
+//                     flag = true;
+//                 }
+//             }
+//             n--; // the last element is huaranteed to be sorted each time
+//         }
+
+//         return nums;
+//     }
+// };
+// int main()
+// {
+//     Solution s;
+//     vector<int> nums = {1, 5, 8, 7, 3, 789, 582, 12, 3, 1, 0, 121545, 01};
+//     s.sorter(nums);
+//     for (int result : nums)
+//         cout << result << " ";
+// }
