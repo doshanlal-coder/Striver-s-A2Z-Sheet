@@ -511,3 +511,70 @@
 //     for (int result : nums)
 //         cout << result << " ";
 // }
+
+
+/////////////////////////
+
+// Given an integer array nums, return a list of all the leaders in the array.
+
+// A leader in an array is an element whose value is strictly greater than all elements to its right in the given array. The rightmost element is always a leader. The elements in the leader array must appear in the order they appear in the nums array.
+
+// Example 1:
+// Input: nums = [1, 2, 5, 3, 1, 2]
+
+// Output: [5, 3, 2]
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Solution {
+// public:
+//     vector<int> leaders(vector<int>& nums) {
+//         vector <int> leader;
+//         for(int i = 0; i< nums.size(); i++){
+//             bool h =true;
+//             for(int j = i+1; j<nums.size(); j++){
+//                 if(nums[i]<nums[j]){
+//                     h = false;
+//                     break;
+//                 }
+//             }
+//             if(h){
+//             leader.push_back(nums[i]);
+//             }
+//         }
+//         return leader;
+      
+//     }
+// };
+// int main()
+// {
+//     Solution s;
+//     vector<int> nums = {-3, 4, 5, 1, -4, -5};
+//     for(int result: s.leaders(nums)) cout<<result<<" ";
+// }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Given an M * N matrix, print the elements in a clockwise spiral manner.
+
+// Return an array with the elements in the order of their appearance when printed in a spiral manner.
+
+// Example 1:
+// Input: matrix = [[1, 2, 3], [4 ,5 ,6], [7, 8, 9]]
+// Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        
+    }
+};
+int main(){
+    Solution s;
+    vector <vector<int>> matrix = {{1, 2, 3}, {4 ,5 ,6}, {7, 8, 9}};
+    s.spiralOrder(matrix);
+}
