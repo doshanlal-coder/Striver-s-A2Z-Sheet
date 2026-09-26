@@ -512,7 +512,6 @@
 //         cout << result << " ";
 // }
 
-
 /////////////////////////
 
 // Given an integer array nums, return a list of all the leaders in the array.
@@ -523,7 +522,6 @@
 // Input: nums = [1, 2, 5, 3, 1, 2]
 
 // Output: [5, 3, 2]
-
 
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -544,7 +542,7 @@
 //             }
 //         }
 //         return leader;
-      
+
 //     }
 // };
 // int main()
@@ -556,25 +554,60 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Roman numerals are represented by seven different symbols:
 
-// Given an M * N matrix, print the elements in a clockwise spiral manner.
+// I = 1
+// V = 5
+// X = 10
+// L = 50
+// C = 100
+// D = 500
+// M = 1000
+// Roman numerals are typically written from largest to smallest, left to right. However, in specific cases, a smaller numeral placed before a larger one indicates subtraction.
 
-// Return an array with the elements in the order of their appearance when printed in a spiral manner.
+// The following subtractive combinations are valid:
 
-// Example 1:
-// Input: matrix = [[1, 2, 3], [4 ,5 ,6], [7, 8, 9]]
-// Output: [1, 2, 3, 6, 9, 8, 7, 4, 5]
+// I before V (5) and X (10) → 4 and 9
+// X before L (50) and C (100) → 40 and 90
+// C before D (500) and M (1000) → 400 and 900
+// Given a Roman numeral, convert it to an integer.
 
 #include <bits/stdc++.h>
 using namespace std;
-class Solution {
-public:
-    vector<int> spiralOrder(vector<vector<int>>& matrix) {
-        
+int main()
+{
+    string s = "III";
+    int number = 0;
+    vector<int> arr;
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] == 'I')
+            arr.push_back(1);
+        else if (s[i] == 'V')
+            arr.push_back(5);
+        else if (s[i] == 'X')
+            arr.push_back(10);
+        else if (s[i] == 'L')
+            arr.push_back(50);
+        else if (s[i] == 'C')
+            arr.push_back(100);
+        else if (s[i] == 'D')
+            arr.push_back(500);
+        else if (s[i] == 'M')
+            arr.push_back(1000);
     }
-};
-int main(){
-    Solution s;
-    vector <vector<int>> matrix = {{1, 2, 3}, {4 ,5 ,6}, {7, 8, 9}};
-    s.spiralOrder(matrix);
+    arr.push_back(0);
+    for (int i = 0; i < arr.size() - 1; i++)
+    {
+        if (arr[i + 1] > arr[i])
+        {
+            number -= arr[i];
+        }
+        else
+        {
+            number += arr[i];
+        }
+    }
+    cout << number;
+    return 0;
 }
