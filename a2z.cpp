@@ -572,42 +572,111 @@
 // C before D (500) and M (1000) → 400 and 900
 // Given a Roman numeral, convert it to an integer.
 
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     string s = "III";
+//     int number = 0;
+//     vector<int> arr;
+//     for (int i = 0; i < s.length(); i++)
+//     {
+//         if (s[i] == 'I')
+//             arr.push_back(1);
+//         else if (s[i] == 'V')
+//             arr.push_back(5);
+//         else if (s[i] == 'X')
+//             arr.push_back(10);
+//         else if (s[i] == 'L')
+//             arr.push_back(50);
+//         else if (s[i] == 'C')
+//             arr.push_back(100);
+//         else if (s[i] == 'D')
+//             arr.push_back(500);
+//         else if (s[i] == 'M')
+//             arr.push_back(1000);
+//     }
+//     arr.push_back(0);
+//     for (int i = 0; i < arr.size() - 1; i++)
+//     {
+//         if (arr[i + 1] > arr[i])
+//         {
+//             number -= arr[i];
+//         }
+//         else
+//         {
+//             number += arr[i];
+//         }
+//     }
+//     cout << number;
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// converting string to integer;
+//  #include <bits/stdc++.h>
+//  using namespace std;
+//  int main (){
+//      string s ="1234567890";
+//      int num = stoi(s);
+//      cout<<num+10;
+//  }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 420. Remove Outermost Parentheses
+// A valid parentheses string is defined by the following rules:
+
+// It is the empty string "".
+// If A is a valid parentheses string, then so is "(" + A + ")".
+// If A and B are valid parentheses strings, then A + B is also valid.
+// A primitive valid parentheses string is a non-empty valid string that cannot be split into two or more non-empty valid parentheses strings.
+
+// Given a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
+
+// Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
+
+// Example 1:
+// Input: s = "((()))"
+
+// Output: "(())"
+
+#include <iostream>
 using namespace std;
-int main()
+class Solution
 {
-    string s = "III";
-    int number = 0;
-    vector<int> arr;
-    for (int i = 0; i < s.length(); i++)
+public:
+    string paren(string s)
     {
-        if (s[i] == 'I')
-            arr.push_back(1);
-        else if (s[i] == 'V')
-            arr.push_back(5);
-        else if (s[i] == 'X')
-            arr.push_back(10);
-        else if (s[i] == 'L')
-            arr.push_back(50);
-        else if (s[i] == 'C')
-            arr.push_back(100);
-        else if (s[i] == 'D')
-            arr.push_back(500);
-        else if (s[i] == 'M')
-            arr.push_back(1000);
-    }
-    arr.push_back(0);
-    for (int i = 0; i < arr.size() - 1; i++)
-    {
-        if (arr[i + 1] > arr[i])
+        string s2 = s;
+        string s3 = "";
+        int count = 0;
+        for (int i = 0; i < s.length(); i++)
         {
-            number -= arr[i];
+            if (s[i] == '(')
+            {
+                count++;
+                if (count != 1)
+                {
+                    s3 += s[i];
+                }
+            }
+            if(s[i] == ')'){
+                count--;
+                if(count != 0){
+                    s3+= s[i];
+                }
+            }
         }
-        else
-        {
-            number += arr[i];
-        }
+        return s3;
     }
-    cout << number;
+};
+int main(){
+    Solution s;
+    string s1 = "()(()())(())";
+    cout<<s.paren(s1);
     return 0;
 }
