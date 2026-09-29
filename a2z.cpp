@@ -644,39 +644,42 @@
 
 // Output: "(())"
 
-#include <iostream>
-using namespace std;
-class Solution
-{
-public:
-    string paren(string s)
-    {
-        string s2 = s;
-        string s3 = "";
-        int count = 0;
-        for (int i = 0; i < s.length(); i++)
-        {
-            if (s[i] == '(')
-            {
-                count++;
-                if (count != 1)
-                {
-                    s3 += s[i];
-                }
-            }
-            if(s[i] == ')'){
-                count--;
-                if(count != 0){
-                    s3+= s[i];
-                }
-            }
-        }
-        return s3;
-    }
-};
-int main(){
-    Solution s;
-    string s1 = "()(()())(())";
-    cout<<s.paren(s1);
-    return 0;
-}
+// #include <iostream>
+// using namespace std;
+// class Solution
+// {
+// public:
+//     string paren(string s)
+//     {
+//         string s2 = s;
+//         string s3 = "";
+//         int count = 0;
+//         for (int i = 0; i < s.length(); i++)
+//         {
+//             if (s[i] == '(')
+//             {
+//                 count++;
+//                 if (count != 1)
+//                 {
+//                     s3 += s[i];
+//                 }
+//             }
+//             if(s[i] == ')'){
+//                 count--;
+//                 if(count != 0){
+//                     s3+= s[i];
+//                 }
+//             }
+//         }
+//         return s3;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     string s1 = "()(()())(())";
+//     cout<<s.paren(s1);
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
