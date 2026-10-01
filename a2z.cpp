@@ -683,3 +683,37 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Reverse the string
+
+#include <bits/stdc++.h>
+using namespace std;
+class Solution
+{
+public:
+    string reverseWords(string s)
+    {
+        stack <string> revi ={};
+        string temp = "";
+        for(int i = 0 ; i < s.length() ; i++){
+            if(s[i] != ' '){
+                temp += s[i];
+            }else{
+                revi.push_back(temp);
+                temp = "";
+            }
+        }
+        string stg = "";
+        for(string val : revi){
+            stg = stg + val + " ";
+            revi.pop_back();
+        }
+        return stg;
+    }
+};
+int main()
+{
+    Solution st;
+    string s = "I am Doshan";
+    cout << st.reverseWords(s);
+}
