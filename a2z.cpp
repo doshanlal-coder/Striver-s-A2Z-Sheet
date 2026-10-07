@@ -684,36 +684,279 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Reverse the string
+// Max depth search in a binary tree
+//  #include <bits/stdc++.h>
+//  using namespace std;
+//  struct TreeNode{
+//      int data;
+//      struct TreeNode *left;
+//      struct TreeNode *right;
+//      TreeNode(int data){
+//          this->data = data;
+//          left = right = nullptr;
+//      }
+//  };
+//  class Solution {
+//  public:
+//      int maxDepth(TreeNode* root1) {
+//          //your code goes here
+//          if(root1 == nullptr) return 0;
 
-#include <bits/stdc++.h>
-using namespace std;
-class Solution
-{
-public:
-    string reverseWords(string s)
-    {
-        stack <string> revi ={};
-        string temp = "";
-        for(int i = 0 ; i < s.length() ; i++){
-            if(s[i] != ' '){
-                temp += s[i];
-            }else{
-                revi.push_back(temp);
-                temp = "";
-            }
-        }
-        string stg = "";
-        for(string val : revi){
-            stg = stg + val + " ";
-            revi.pop_back();
-        }
-        return stg;
-    }
-};
-int main()
-{
-    Solution st;
-    string s = "I am Doshan";
-    cout << st.reverseWords(s);
-}
+//         return 1 + max(maxDepth(root1->left), maxDepth(root1->right));
+//     }
+// };
+// int main(){
+//     Solution s;
+//     struct TreeNode *root1 = new TreeNode(1);
+
+//     root1->left = new TreeNode(2);
+//     root1->right = new TreeNode(3);
+
+//     root1->left->left = new TreeNode(4);
+//     root1->left->left->right = new TreeNode(5);
+//     root1->left->left->right->right = new TreeNode(6);
+
+//     cout<< s.maxDepth(root1);
+//     return 0;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// To check Whether the two given Binary Trees Are same or not
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// struct TreeNode
+// {
+//     int data;
+//     struct TreeNode *left;
+//     struct TreeNode *right;
+//     TreeNode(int data)
+//     {
+//         this->data = data;
+//         left = right = nullptr;
+//     }
+// };
+
+// class Solution
+// {
+// public:
+//     void help(TreeNode *root1, TreeNode *root2, int &check)
+//     {
+//         if (check == 0)
+//             return;
+//         if (root1 == nullptr and root2 == nullptr)
+//             return;
+//         if (root1 == nullptr and root2 != nullptr)
+//         {
+//             check = 0;
+//             return;
+//         }
+//         if (root1 != nullptr and root2 == nullptr)
+//         {
+//             check = 0;
+//             return;
+//         }
+
+//         if (root1->data != root2->data)
+//         {
+//             check = 0;
+//             return;
+//         }
+
+//         help(root1->left, root2->left, check);
+//         help(root1->right, root2->right, check);
+//     }
+
+//     bool isSameTree(TreeNode *p, TreeNode *q)
+//     {
+//         int check = 1;
+//         help(p, q, check);
+//         return check == 1;
+//     }
+// };
+
+// int main()
+// {
+//     Solution s;
+//     struct TreeNode *root1 = new TreeNode(1);
+
+//     root1->left = new TreeNode(2);
+//     root1->right = new TreeNode(3);
+
+//     root1->left->left = new TreeNode(4);
+//     root1->left->left->right = new TreeNode(5);
+//     root1->left->left->right->right = new TreeNode(6);
+
+//     struct TreeNode *root2 = new TreeNode(1);
+
+//     root2->left = new TreeNode(2);
+//     root2->right = new TreeNode(3);
+
+//     root2->left->left = new TreeNode(4);
+//     root2->left->left->right = new TreeNode(5);
+//     // root2->left->left->right->right = new TreeNode(6);
+
+//     cout<< s.isSameTree(root1, root2);
+//     return 0;
+// }
+
+////optimizing above code
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// struct TreeNode
+// {
+//     int data;
+//     struct TreeNode *left;
+//     struct TreeNode *right;
+//     TreeNode(int data)
+//     {
+//         this->data = data;
+//         left = right = nullptr;
+//     }
+// };
+// class Solution{
+//     public:
+//     bool isSameTree(TreeNode *p, TreeNode *q){
+//         //  !p  for any pointer means p == nullptr
+//         if()
+//     }
+
+// };
+
+// int main()
+// {
+//     Solution s;
+//     struct TreeNode *root1 = new TreeNode(1);
+
+//     root1->left = new TreeNode(2);
+//     root1->right = new TreeNode(3);
+
+//     root1->left->left = new TreeNode(4);
+//     root1->left->left->right = new TreeNode(5);
+//     root1->left->left->right->right = new TreeNode(6);
+
+//     struct TreeNode *root2 = new TreeNode(1);
+
+//     root2->left = new TreeNode(2);
+//     root2->right = new TreeNode(3);
+
+//     root2->left->left = new TreeNode(4);
+//     root2->left->left->right = new TreeNode(5);
+//     // root2->left->left->right->right = new TreeNode(6);
+
+//     cout<< s.isSameTree(root1, root2);
+//     return 0;
+// }
+
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// A. In Search of Convenience
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int t;
+//     cin >> t;
+//     while (t--)
+//     {
+//         int x, y, r;
+//         cin >> x >> y >> r;
+//         for (int i = -35; i <= 35; i++)
+//         {
+//             bool flag = false;
+//             for (int j = -35; j <= 35; j++)
+//             {
+//                 if (((x - i) * (x - i)) + ((y - j) * (y - j)) == r * r)
+//                 {
+//                     cout << i << " " << j << "\n";
+//                     flag = true;
+//                 }
+//                 if (flag)
+//                     break;
+//             }
+//             if (flag)
+//                 break;
+//         }
+//     }
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// B. Did Not Go to Print
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main()
+// {
+//     int t;
+//     cin >> t;
+//     while (t--)
+//     {
+//         int n;
+//         string s;
+//         cin >> n >> s;
+//         vector<int> notPrinted;
+//         vector<int> rem;
+//         for (int i = 1; i <= n; i++)
+//         {
+//             if (s[i-1] == '1')
+//             { // doc is placed on top
+//                 notPrinted.push_back(i);
+//             }
+//             else if (s[i-1] == '2')
+//             {
+//                 if (!notPrinted.empty())
+//                 {
+//                     // print top most
+//                     notPrinted.pop_back();
+//                     rem.push_back(i);
+//                 }
+//             }
+//         }
+//         notPrinted.insert(notPrinted.end(), rem.begin(), rem.end());
+//         sort(notPrinted.begin(), notPrinted.end());
+
+//         cout<<notPrinted.size()<<"\n";
+//         for(int result: notPrinted) cout<<result<<" ";
+//         cout<<"\n";
+//     }
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//C.  Unrequited Love
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// #define ll long long
+// int main(){
+//     int t;
+//     cin>>t;
+//     while(t--){
+//         int n;
+//         cin>>n;
+//         vector <int> audLove(n);
+//         for(int i = 0 ; i< n ; i++){
+//             cin>>audLove[i];
+//         }
+//         ll loveUnit = 0;
+//         int count = 0;
+//         for(int i = 0; i < n-5 ; i++){
+//             for(int  j = i+1; j < n-4 ; j++){
+//                 if(j<= i+4){
+//                     if(j == i+2 or j == i+4) continue;
+//                 }
+//                 loveUnit = (audLove[i]+audLove[i+2]-audLove[i+4]) - (audLove[j]+audLove[j+2]-audLove[j+4]);
+//                 if(loveUnit == 0) count++;
+//                 loveUnit =0;
+
+//             }
+//         }
+//         cout<<count<<"\n";
+
+//     }
+// }
