@@ -154,8 +154,8 @@
 //     }
 // };
 // int main (){
-//     Solution s;
-//     s.printNumbers(10);
+//     Solution s1;
+//     s1.printNumbers(10);
 //     return 0;
 // }
 
@@ -184,8 +184,8 @@
 // };
 // int main()
 // {
-//     Solution s;
-//     s.printNumbers(10);
+//     Solution s1;
+//     s1.printNumbers(10);
 //     return 0;
 // }
 
@@ -203,14 +203,14 @@
 // 		}
 // };
 // int main(){
-//     Solution s;
-//     cout<<s.NnumbersSum(100);
+//     Solution s1;
+//     cout<<s1.NnumbersSum(100);
 // }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Given an integer array nums, move all the 0's to the end of the array. The relative order of the other elements must remain the same.
+// Given an integer array nums, move all the 0's1 to the end of the array. The relative order of the other elements must remain the same.
 
 // This must be done in place, without making a copy of the array.
 
@@ -303,10 +303,10 @@
 // };
 // int main()
 // {
-//     Solution s;
+//     Solution s1;
 //     vector<int> num1 = {1, 2, 3, 4, 5, 6, 7};
 //     vector<int> num2 = {4, 5, 6, 7, 8};
-//     vector<int> result = s.unionArray(num1, num2);
+//     vector<int> result = s1.unionArray(num1, num2);
 //     for (int val : result)
 //         cout << val << " ";
 // }
@@ -401,9 +401,9 @@
 //     }
 // };
 // int main (){
-//     Solution s;
+//     Solution s1;
 //     vector <int> nums = {1, 0, 2, 1, 0};
-//     s.sortZeroOneTwo(nums);
+//     s1.sortZeroOneTwo(nums);
 //     for(int val : nums) cout<<val<<" ";
 // }
 
@@ -433,9 +433,9 @@
 //     }
 // };
 // int main(){
-//     Solution s;
+//     Solution s1;
 //     vector <int> nums = {1, 1, 1, 2, 1, 2};
-//     cout<<s.sol(nums);
+//     cout<<s1.sol(nums);
 // }
 
 /// selection sort
@@ -466,9 +466,9 @@
 // };
 // int main()
 // {
-//     Solution s;
+//     Solution s1;
 //     vector<int> RR = {29, 10, 14, 37, 13, 45, 56, 0, 0, 1, 89, 454654};
-//     s.select(RR);
+//     s1.select(RR);
 // for (int i = 0; i < RR.size(); i++)
 // {
 //     cout << RR[i] << " ";
@@ -505,9 +505,9 @@
 // };
 // int main()
 // {
-//     Solution s;
+//     Solution s1;
 //     vector<int> nums = {1, 5, 8, 7, 3, 789, 582, 12, 3, 1, 0, 121545, 01};
-//     s.sorter(nums);
+//     s1.sorter(nums);
 //     for (int result : nums)
 //         cout << result << " ";
 // }
@@ -547,9 +547,9 @@
 // };
 // int main()
 // {
-//     Solution s;
+//     Solution s1;
 //     vector<int> nums = {-3, 4, 5, 1, -4, -5};
-//     for(int result: s.leaders(nums)) cout<<result<<" ";
+//     for(int result: s1.leaders(nums)) cout<<result<<" ";
 // }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -576,24 +576,24 @@
 // using namespace std;
 // int main()
 // {
-//     string s = "III";
+//     string s1 = "III";
 //     int number = 0;
 //     vector<int> arr;
-//     for (int i = 0; i < s.length(); i++)
+//     for (int i = 0; i < s1.length(); i++)
 //     {
-//         if (s[i] == 'I')
+//         if (s1[i] == 'I')
 //             arr.push_back(1);
-//         else if (s[i] == 'V')
+//         else if (s1[i] == 'V')
 //             arr.push_back(5);
-//         else if (s[i] == 'X')
+//         else if (s1[i] == 'X')
 //             arr.push_back(10);
-//         else if (s[i] == 'L')
+//         else if (s1[i] == 'L')
 //             arr.push_back(50);
-//         else if (s[i] == 'C')
+//         else if (s1[i] == 'C')
 //             arr.push_back(100);
-//         else if (s[i] == 'D')
+//         else if (s1[i] == 'D')
 //             arr.push_back(500);
-//         else if (s[i] == 'M')
+//         else if (s1[i] == 'M')
 //             arr.push_back(1000);
 //     }
 //     arr.push_back(0);
@@ -619,8 +619,8 @@
 //  #include <bits/stdc++.h>
 //  using namespace std;
 //  int main (){
-//      string s ="1234567890";
-//      int num = stoi(s);
+//      string s1 ="1234567890";
+//      int num = stoi(s1);
 //      cout<<num+10;
 //  }
 
@@ -635,12 +635,12 @@
 // If A and B are valid parentheses strings, then A + B is also valid.
 // A primitive valid parentheses string is a non-empty valid string that cannot be split into two or more non-empty valid parentheses strings.
 
-// Given a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
+// Given a valid parentheses string s1, consider its primitive decomposition: s1 = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
 
-// Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
+// Return s1 after removing the outermost parentheses of every primitive string in the primitive decomposition of s1.
 
 // Example 1:
-// Input: s = "((()))"
+// Input: s1 = "((()))"
 
 // Output: "(())"
 
@@ -649,25 +649,25 @@
 // class Solution
 // {
 // public:
-//     string paren(string s)
+//     string paren(string s1)
 //     {
-//         string s2 = s;
+//         string s2 = s1;
 //         string s3 = "";
 //         int count = 0;
-//         for (int i = 0; i < s.length(); i++)
+//         for (int i = 0; i < s1.length(); i++)
 //         {
-//             if (s[i] == '(')
+//             if (s1[i] == '(')
 //             {
 //                 count++;
 //                 if (count != 1)
 //                 {
-//                     s3 += s[i];
+//                     s3 += s1[i];
 //                 }
 //             }
-//             if(s[i] == ')'){
+//             if(s1[i] == ')'){
 //                 count--;
 //                 if(count != 0){
-//                     s3+= s[i];
+//                     s3+= s1[i];
 //                 }
 //             }
 //         }
@@ -675,9 +675,9 @@
 //     }
 // };
 // int main(){
-//     Solution s;
+//     Solution s1;
 //     string s1 = "()(()())(())";
-//     cout<<s.paren(s1);
+//     cout<<s1.paren(s1);
 //     return 0;
 // }
 
@@ -706,7 +706,7 @@
 //     }
 // };
 // int main(){
-//     Solution s;
+//     Solution s1;
 //     struct TreeNode *root1 = new TreeNode(1);
 
 //     root1->left = new TreeNode(2);
@@ -716,7 +716,7 @@
 //     root1->left->left->right = new TreeNode(5);
 //     root1->left->left->right->right = new TreeNode(6);
 
-//     cout<< s.maxDepth(root1);
+//     cout<< s1.maxDepth(root1);
 //     return 0;
 // }
 
@@ -778,7 +778,7 @@
 
 // int main()
 // {
-//     Solution s;
+//     Solution s1;
 //     struct TreeNode *root1 = new TreeNode(1);
 
 //     root1->left = new TreeNode(2);
@@ -797,7 +797,7 @@
 //     root2->left->left->right = new TreeNode(5);
 //     // root2->left->left->right->right = new TreeNode(6);
 
-//     cout<< s.isSameTree(root1, root2);
+//     cout<< s1.isSameTree(root1, root2);
 //     return 0;
 // }
 
@@ -827,7 +827,7 @@
 
 // int main()
 // {
-//     Solution s;
+//     Solution s1;
 //     struct TreeNode *root1 = new TreeNode(1);
 
 //     root1->left = new TreeNode(2);
@@ -846,7 +846,7 @@
 //     root2->left->left->right = new TreeNode(5);
 //     // root2->left->left->right->right = new TreeNode(6);
 
-//     cout<< s.isSameTree(root1, root2);
+//     cout<< s1.isSameTree(root1, root2);
 //     return 0;
 // }
 
@@ -897,17 +897,17 @@
 //     while (t--)
 //     {
 //         int n;
-//         string s;
-//         cin >> n >> s;
+//         string s1;
+//         cin >> n >> s1;
 //         vector<int> notPrinted;
 //         vector<int> rem;
 //         for (int i = 1; i <= n; i++)
 //         {
-//             if (s[i-1] == '1')
+//             if (s1[i-1] == '1')
 //             { // doc is placed on top
 //                 notPrinted.push_back(i);
 //             }
-//             else if (s[i-1] == '2')
+//             else if (s1[i-1] == '2')
 //             {
 //                 if (!notPrinted.empty())
 //                 {
@@ -928,7 +928,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//C.  Unrequited Love
+// C.  Unrequited Love
 
 // #include <bits/stdc++.h>
 // using namespace std;
@@ -963,3 +963,4 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
