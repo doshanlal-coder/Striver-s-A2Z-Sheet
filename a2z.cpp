@@ -852,3 +852,57 @@
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Revering the stack  using recursion
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// class Solution
+// {
+// public:
+//     void rev(stack<int> &st, stack<int> &temp)
+//     {
+//         if (st.empty())
+//             return;
+
+//         temp.push(st.top());
+//         st.pop();
+//         rev(st, temp);
+//     }
+//     void reverseStack(stack<int> &st)
+//     {
+//         if (st.empty())
+//             return;
+//         stack<int> temp;
+//         rev(st, temp);
+//         st = temp;
+//         return;
+//     }
+// };
+// int main()
+// {
+//     Solution s;
+//     stack<int> st;
+//     st.push(10);
+//     st.push(2);
+//     s.reverseStack(st);
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Question :
+// A digit string is considered good if the digits at even indices (0-based) are even digits (0, 2, 4, 6, 8) and the digits at odd indices are prime digits (2, 3, 5, 7).
+
+// Given an integer n, return the total number of good digit strings of length n. As the result may be large, return it modulo 109 + 7.
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int countGoodNumbers(long long n) {
+        int count = 1;
+        count *= pow(5, n/2+1);
+        count *= pow(4, n/2);
+        return count;
+    }
+};
