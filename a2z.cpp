@@ -894,15 +894,3 @@
 // A digit string is considered good if the digits at even indices (0-based) are even digits (0, 2, 4, 6, 8) and the digits at odd indices are prime digits (2, 3, 5, 7).
 
 // Given an integer n, return the total number of good digit strings of length n. As the result may be large, return it modulo 109 + 7.
-#include <bits/stdc++.h>
-using namespace std;
-
-class Solution {
-public:
-    int countGoodNumbers(long long n) {
-        int count = 1;
-        count *= pow(5, n/2+1);
-        count *= pow(4, n/2);
-        return count;
-    }
-};
